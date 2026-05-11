@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Enrollment Form</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JPDB -->
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+
+    <script src="student.js"></script>
+</head>
+
+<body>
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">Student Enrollment Form</h2>
+
+    <form id="studentForm">
+
+        <div class="form-group">
+            <label>Roll No</label>
+            <input type="text" id="rollNo" class="form-control"
+                   placeholder="Enter Roll No"
+                   onblur="getStudent()">
+        </div>
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="fullName" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Class</label>
+            <input type="text" id="studentClass" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Birth Date</label>
+            <input type="date" id="birthDate" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Address</label>
+            <textarea id="address" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Enrollment Date</label>
+            <input type="date" id="enrollmentDate" class="form-control">
+        </div>
+
+        <button type="button" id="saveBtn"
+                class="btn btn-success"
+                onclick="saveStudent()">
+            Save
+        </button>
+
+        <button type="button" id="updateBtn"
+                class="btn btn-primary"
+                onclick="updateStudent()">
+            Update
+        </button>
+
+        <button type="button" id="resetBtn"
+                class="btn btn-danger"
+                onclick="resetForm()">
+            Reset
+        </button>
+
+    </form>
+</div>
+
+<script>
+    resetForm();
+</script>
+
+</body>
+</html>
